@@ -25,7 +25,7 @@ public class EnemyMovement : MonoBehaviour
         xDir = Random.Range(-1.0f, 1.0f);
         yDir = Random.Range(-1.0f, 1.0f);
         movementDirection = new Vector2(xDir, yDir).normalized;
-        directionAngle = Vector2.Angle(xDir, yDir);
+        //directionAngle = Vector2.Angle(xDir, yDir);
         transform.Rotate(movementDirection);
         movementSpeed = movementDirection * enemyVelocity;
     }
