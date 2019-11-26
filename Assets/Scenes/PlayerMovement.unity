@@ -343,9 +343,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acceleration: 0.5
-  dashSpeed: 500
   maxVelocity: {x: 5, y: 5}
   dashCooldown: 0.5
+  maxDash: 500
+  chargeRate: 100
+  initialDash: 100
 --- !u!50 &1915256146
 Rigidbody2D:
   serializedVersion: 4
