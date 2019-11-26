@@ -214,6 +214,7 @@ GameObject:
   - component: {fileID: 1669750565}
   - component: {fileID: 1669750564}
   - component: {fileID: 1669750563}
+  - component: {fileID: 1669750567}
   m_Layer: 0
   m_Name: New Sprite
   m_TagString: Untagged
@@ -310,6 +311,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1669750567
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669750562}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: ca0d64e9841a7364d9eea5630b2e6f5d, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1915256144
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,8 +367,8 @@ MonoBehaviour:
   acceleration: 0.5
   maxVelocity: {x: 5, y: 5}
   dashCooldown: 0.5
-  maxDash: 500
-  chargeRate: 100
+  maxDash: 400
+  chargeRate: 25
   initialDash: 100
 --- !u!50 &1915256146
 Rigidbody2D:
@@ -360,7 +382,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
