@@ -423,6 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyVelocity: 0.4
+  rotationSpeed: 1
   enemyStartingPosition: {x: 0, y: 0}
   enemyNextPosition: {x: 0, y: 0}
   pointsToVisit:
@@ -523,7 +524,7 @@ Transform:
   m_GameObject: {fileID: 1352764459}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.3, y: 0.66, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 929693073}
   m_Father: {fileID: 0}

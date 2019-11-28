@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     public float enemyVelocity;
+    public float rotationSpeed;
 
     public Vector2 enemyStartingPosition;
     public Vector2 enemyNextPosition;
@@ -35,9 +36,10 @@ public class EnemyMovement : MonoBehaviour
 
     IEnumerator moveEnemy()
     {
-        for(int i = 0; i< pointsToVisit.Length; ++i)
+        for (int i = 0; i< pointsToVisit.Length; ++i)
         {
             EnemyRotate = StartCoroutine(RotateEnemy(i));
+            yield return EnemyRotate;
 
             EnemyMoving = StartCoroutine(Moving(i));
             yield return EnemyMoving;
@@ -59,7 +61,8 @@ public class EnemyMovement : MonoBehaviour
 
         while (transform.rotation != nextPointRotate)
         {
-            transform.rotation = nextPointRotate;
+            transform.rotation = Quaternion.Slerp(transform.rotation, nextPointRotate, 
+                Time.deltaTime * rotationSpeed);
             yield return null;
         }
     }
