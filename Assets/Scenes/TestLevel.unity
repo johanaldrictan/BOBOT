@@ -2177,20 +2177,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8683685971572889787, guid: 4715452b653041f458f74cacc3bfa99d,
-        type: 3}
-      propertyPath: m_Radius
-      value: 0.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 8683685971572889786, guid: 4715452b653041f458f74cacc3bfa99d,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8683685971572889785, guid: 4715452b653041f458f74cacc3bfa99d,
-        type: 3}
-      propertyPath: rotationSpeed
-      value: 10
+    - target: {fileID: 358017104, guid: 4715452b653041f458f74cacc3bfa99d, type: 3}
+      propertyPath: trailDelay
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4715452b653041f458f74cacc3bfa99d, type: 3}

@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     public float initialDash = 100;
     float dashSpeed = 0;
     bool charging = false;
+    public Trail trail;
+    public float trailDuration;
 
     private void Awake()
     {
@@ -61,11 +63,19 @@ public class PlayerController : MonoBehaviour
             dashSpeed += (chargeRate);
         if (Input.GetKeyUp(KeyCode.Space))
         {
+            StartCoroutine(MakeTrail());
             //Debug.Log("Firing");
             Debug.Log("Dash Speed: " + dashSpeed);
             rb.AddForce(transform.up * dashSpeed, ForceMode2D.Impulse);
             dashSpeed = initialDash;
             charging = false;
         }
+    }
+    IEnumerator MakeTrail()
+    {
+        Debug.Log("Making Trail");
+        trail.makeTrail = true;
+        yield return new WaitForSeconds(trailDuration);
+        trail.makeTrail = false;
     }
 }
