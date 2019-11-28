@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1f670f1f59d7c104fb97e4ff5e17bb18
+guid: f1876224cfede0943bc5ca161c845493
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -107,10 +107,10 @@ TextureImporter:
       name: bobot_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 1
+        y: 1
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,7 +118,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95f86f7a56a58a24dbbe7a2d091f0878
+      spriteID: 27fb8ed42ad11334894a90f829581de6
       internalID: -2099682327166262187
       vertices: []
       indices: 
@@ -128,10 +128,10 @@ TextureImporter:
       name: bobot_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
+        x: 33
+        y: 1
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,7 +139,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 223108fda734d5f4dbf444680175d410
+      spriteID: 421717bfe06b8a042af36931886a3d4a
       internalID: 5183819882339721919
       vertices: []
       indices: 

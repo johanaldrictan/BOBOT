@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float acceleration;
     public Vector2 maxVelocity;
     public float dashCooldown = .5f;
+    public float rotationSpeed;
     Vector2 lastMoveDir;
 
     public float maxDash = 500;
@@ -40,13 +41,13 @@ public class PlayerController : MonoBehaviour
     }
     private void HandleMovement()
     {
-        Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        if (input.magnitude > 1)
-            input.Normalize();
-        if(input.magnitude != 0)
-            lastMoveDir = input;
+        if (Input.GetKey(KeyCode.A))
+            transform.Rotate(Vector3.forward * rotationSpeed);
+        else if (Input.GetKey(KeyCode.D))
+            transform.Rotate(-Vector3.forward * rotationSpeed);
+        float speed = Input.GetAxis("Vertical");
         if (Mathf.Abs(rb.velocity.x) < Mathf.Abs(maxVelocity.x) && Mathf.Abs(rb.velocity.y) < Mathf.Abs(maxVelocity.y))
-            rb.velocity += input * acceleration;
+            rb.velocity += new Vector2(transform.up.x, transform.up.y) * speed * acceleration;
     }
     private void HandleDash()
     {
@@ -62,7 +63,7 @@ public class PlayerController : MonoBehaviour
         {
             //Debug.Log("Firing");
             Debug.Log("Dash Speed: " + dashSpeed);
-            rb.AddForce(lastMoveDir * dashSpeed, ForceMode2D.Impulse);
+            rb.AddForce(transform.up * dashSpeed, ForceMode2D.Impulse);
             dashSpeed = initialDash;
             charging = false;
         }
