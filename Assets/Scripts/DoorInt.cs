@@ -6,12 +6,12 @@ public class DoorInt : MonoBehaviour
 {
 
     private SpriteRenderer s;
-    private Rigidbody2D rb;
+    private Collider2D c;
     // Start is called before the first frame update
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        c = GetComponent<Collider2D>();
         s = GetComponent<SpriteRenderer>();
         Debug.Log("door ACTIVE");
     }
@@ -21,11 +21,18 @@ public class DoorInt : MonoBehaviour
     {
         
     }
-    public void interact()
+    public void interactOn()
     {
         //play noise too?
         Debug.Log("door INACTIVE");
-        rb.isKinematic = true;
+        c.enabled = false;
         s.enabled = false;
+    }
+    public void interactOff()
+    {
+        //play noise too?
+        Debug.Log("door ACTIVE");
+        c.enabled = true;
+        s.enabled = true;
     }
 }

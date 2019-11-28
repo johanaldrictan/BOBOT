@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SwitchInt : MonoBehaviour
 {
-    public DoorInt link;
+    public DoorInt linkOn;
+    public DoorInt linkOff;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,9 @@ public class SwitchInt : MonoBehaviour
         {
             //play noise?
             Debug.Log("switch ON!");
-            link.interact();
+            linkOn.interactOn();
+            Debug.Log("switch OFF!");
+            linkOff.interactOff();
         }
     }
 
