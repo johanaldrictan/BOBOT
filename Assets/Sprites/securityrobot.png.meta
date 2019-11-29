@@ -1,0 +1,829 @@
+fileFormatVersion: 2
+guid: d922b8373f5aeb340979b53aeb565249
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1072417404220551238
+    second: securityrobot_0
+  - first:
+      213: -1604996574453319761
+    second: securityrobot_1
+  - first:
+      213: -8696307906627435467
+    second: securityrobot_2
+  - first:
+      213: 4121386253384854960
+    second: securityrobot_3
+  - first:
+      213: -5981957857566838115
+    second: securityrobot_4
+  - first:
+      213: 8615434131069259234
+    second: securityrobot_5
+  - first:
+      213: -728641297735660477
+    second: securityrobot_6
+  - first:
+      213: 4479622361861094599
+    second: securityrobot_7
+  - first:
+      213: 92204539299582357
+    second: securityrobot_8
+  - first:
+      213: -1326116848252824576
+    second: securityrobot_9
+  - first:
+      213: 6434264691078382150
+    second: securityrobot_10
+  - first:
+      213: -3923944525029013487
+    second: securityrobot_11
+  - first:
+      213: -1023636704736791587
+    second: securityrobot_12
+  - first:
+      213: 1447478628586787708
+    second: securityrobot_13
+  - first:
+      213: -7311209825649428703
+    second: securityrobot_14
+  - first:
+      213: -2779384301041292215
+    second: securityrobot_15
+  - first:
+      213: 2902162432445000765
+    second: securityrobot_16
+  - first:
+      213: -1642868171302278850
+    second: securityrobot_17
+  - first:
+      213: 8998432744813734384
+    second: securityrobot_18
+  - first:
+      213: 6451558713728587955
+    second: securityrobot_19
+  - first:
+      213: 8560981124105992606
+    second: securityrobot_20
+  - first:
+      213: 3188629310080658201
+    second: securityrobot_21
+  - first:
+      213: -484143662293792856
+    second: securityrobot_22
+  - first:
+      213: -673095522956701768
+    second: securityrobot_23
+  - first:
+      213: -6297945258866318725
+    second: securityrobot_24
+  - first:
+      213: 6310480748864193630
+    second: securityrobot_25
+  - first:
+      213: 1280264677989960889
+    second: securityrobot_26
+  - first:
+      213: -8313131301114689155
+    second: securityrobot_27
+  - first:
+      213: 6838744682890695395
+    second: securityrobot_28
+  - first:
+      213: -2122577584776941357
+    second: securityrobot_29
+  - first:
+      213: 5777828580380225521
+    second: securityrobot_30
+  - first:
+      213: 6158631198182958896
+    second: securityrobot_31
+  - first:
+      213: -3904471158058870475
+    second: securityrobot_32
+  - first:
+      213: -4900199278454072585
+    second: securityrobot_33
+  - first:
+      213: 746653635502704419
+    second: securityrobot_34
+  - first:
+      213: 141300093073945669
+    second: securityrobot_35
+  - first:
+      213: -9170904595068590873
+    second: securityrobot_36
+  - first:
+      213: 3573377810692870544
+    second: securityrobot_37
+  - first:
+      213: 2293094862315554536
+    second: securityrobot_38
+  - first:
+      213: -3052673314259456546
+    second: securityrobot_39
+  - first:
+      213: 6006041055475268525
+    second: securityrobot_40
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: securityrobot_0
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 77
+        width: 86
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4517ad4577a198643b7868b732f8b623
+      internalID: -1072417404220551238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: securityrobot_9
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 33
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 399d223c39924264db9db5b403455f62
+      internalID: -1326116848252824576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: securityrobot_10
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 32
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 206e350ff8234da42b4367c0ed3ef773
+      internalID: 6434264691078382150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: securityrobot_11
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 32
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa73808bc3cc3a648b2a6e4307db9662
+      internalID: -3923944525029013487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: securityrobot_12
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 32
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe07db0d8b8333249990dd098790ee20
+      internalID: -1023636704736791587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: securityrobot_13
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 32
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74366ef087323984fb5b306d68f55937
+      internalID: 1447478628586787708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: securityrobot_14
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 32
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: facb65c1f978ad048bbfdcd2c0bb0eb1
+      internalID: -7311209825649428703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: securityrobot_16
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 28
+        width: 68
+        height: 15
+      alignment: 9
+      pivot: {x: 0.4374466, y: 0.49999973}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5424f4b73bbf14468382b68660dc59a
+      internalID: 2902162432445000765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: securityrobot_22
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 2
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 881e44d56db7fe542971c2f6ac6bc4ec
+      internalID: -484143662293792856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: securityrobot_23
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 2
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37ca9e8cea586142b4356610c21a1bb
+      internalID: -673095522956701768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: securityrobot_24
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 2
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 543ec77d4ebace64d82c91289e4821c0
+      internalID: -6297945258866318725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: securityrobot_25
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 2
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a13daf30257e3a4418ce268c7ffb3a37
+      internalID: 6310480748864193630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: securityrobot_26
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 2
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70ba8cc2f1eee4e43885f38ada2f672e
+      internalID: 1280264677989960889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: securityrobot_27
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 1
+        width: 13
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf2fc00ae61e593439fa67160592832c
+      internalID: -8313131301114689155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: securityrobot_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1
+        width: 13
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf49bc8f2e1cb848adf44245d54106c
+      internalID: 6838744682890695395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: securityrobot_29
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1
+        width: 13
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0b0533d2262dbd4ab1c2bc7190c13e7
+      internalID: -2122577584776941357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: securityrobot_30
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 1
+        width: 13
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea6cb0310ef1ca344b543a457c3a61af
+      internalID: 5777828580380225521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: securityrobot_31
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 11
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb2032f0e67730347b13fb758a251344
+      internalID: 6158631198182958896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: securityrobot_32
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 11
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af81e55ec37834648abb22f6890d1a7a
+      internalID: -3904471158058870475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: securityrobot_33
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 14
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f6526e47a5d2540adefa7be7a5b289
+      internalID: -4900199278454072585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: securityrobot_34
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 14
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b06185a1b11f304d81e2b0f84194bff
+      internalID: 746653635502704419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: securityrobot_35
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 14
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7690cb9310f7b4cadb7cfe0a6c7445
+      internalID: 141300093073945669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: securityrobot_36
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 14
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 266fd0b3be8396542b78aec2b505767c
+      internalID: -9170904595068590873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: securityrobot_37
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 9
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aecda742b877d3343916ce23e0d5ddfa
+      internalID: 3573377810692870544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: securityrobot_38
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 9
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 498798ecaab2ef446b44dcdfe8b94515
+      internalID: 2293094862315554536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: securityrobot_39
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 9
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a582de47af224b1449688354066a3218
+      internalID: -3052673314259456546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: securityrobot_40
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 9
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 887156677e68c4f4d940b73383053527
+      internalID: 6006041055475268525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

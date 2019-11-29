@@ -59,7 +59,12 @@ public class EnemyMovement : MonoBehaviour
 
         while (transform.rotation != nextPointRotate)
         {
+<<<<<<< HEAD
             transform.rotation = nextPointRotate;
+=======
+            transform.rotation = Quaternion.Lerp(transform.rotation, nextPointRotate, 
+                Time.deltaTime * rotationSpeed);
+>>>>>>> This one is maybe the problem
             yield return null;
         }
     }
