@@ -15,11 +15,14 @@ public class PlayerController : MonoBehaviour
     public float maxDash = 500;
     public float chargeRate = 100;
     public float initialDash = 100;
-    float dashSpeed = 0;
+    public float dashSpeed = 0;
     bool charging = false;
     public Trail trail;
     public float trailDuration;
 
+    //justin's vars
+    public float dmg;
+    public bool dashUP = false;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -34,7 +37,15 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Mathf.Abs(rb.velocity.x) > Mathf.Abs(maxVelocity.x * 1.2f) ||
+            Mathf.Abs(rb.velocity.y) > Mathf.Abs(maxVelocity.y * 1.2f))
+        {
+            dashUP = true;
+        }
+        else
+        {
+            dashUP = false;
+        }
     }
     private void FixedUpdate()
     {
@@ -71,7 +82,23 @@ public class PlayerController : MonoBehaviour
             charging = false;
         }
     }
-    IEnumerator MakeTrail()
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("collision");
+        if(dashUP == true)
+        {
+            Debug.Log("enemy hit");
+            if(collision.gameObject.tag == "Enemy")
+            {
+                collision.gameObject.GetComponent<enemyTest>().takeDmg(dmg);
+            }
+            
+        }
+            
+
+    }
+        IEnumerator MakeTrail()
     {
         Debug.Log("Making Trail");
         trail.makeTrail = true;
