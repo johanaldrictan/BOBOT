@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     public float enemyVelocity;
+    public float rotationSpeed;
 
     public Vector2 enemyStartingPosition;
     public Vector2 enemyNextPosition;
@@ -59,12 +60,8 @@ public class EnemyMovement : MonoBehaviour
 
         while (transform.rotation != nextPointRotate)
         {
-<<<<<<< HEAD
-            transform.rotation = nextPointRotate;
-=======
             transform.rotation = Quaternion.Lerp(transform.rotation, nextPointRotate, 
                 Time.deltaTime * rotationSpeed);
->>>>>>> This one is maybe the problem
             yield return null;
         }
     }
