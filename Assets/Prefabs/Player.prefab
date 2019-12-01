@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 8683685971572889786}
   - component: {fileID: 8683685971572889785}
   - component: {fileID: 358017104}
+  - component: {fileID: 2002702721}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -235,6 +236,7 @@ MonoBehaviour:
   maxVelocity: {x: 5, y: 5}
   dashCooldown: 0.5
   rotationSpeed: 10
+  impulse: {fileID: 0}
   maxDash: 400
   chargeRate: 25
   initialDash: 100
@@ -255,7 +257,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1fc594c974a38499148a163f916f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trailDelay: 0.05
+  trailDelay: 0.01
   trail: {fileID: 6964200589903342697, guid: df8e7bca15fe1c74da7fcada1c2ff8d4, type: 3}
   makeTrail: 0
   trailDecay: 0.2
+--- !u!95 &2002702721
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8683685971572889784}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 503fc895110d4024bbc4b41037477f7c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

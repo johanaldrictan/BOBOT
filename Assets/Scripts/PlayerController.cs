@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using Cinemachine;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//[RequireComponent(typeof(CinemachineImpulseSource))]
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
@@ -11,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public float dashCooldown = .5f;
     public float rotationSpeed;
     Vector2 lastMoveDir;
+    public CinemachineImpulseSource impulse;
 
     public float maxDash = 500;
     public float chargeRate = 100;
@@ -92,10 +95,11 @@ public class PlayerController : MonoBehaviour
             if(collision.gameObject.tag == "Enemy")
             {
                 collision.gameObject.GetComponent<enemyTest>().takeDmg(dmg);
+                impulse.GenerateImpulse();
             }
             
         }
-            
+        impulse.GenerateImpulse();   
 
     }
         IEnumerator MakeTrail()

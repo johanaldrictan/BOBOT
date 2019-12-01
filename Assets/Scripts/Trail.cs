@@ -30,6 +30,8 @@ public class Trail : MonoBehaviour
                 //create trail
                 GameObject currentTrail = Instantiate(trail, transform.position, transform.rotation);
                 trailDelaySeconds = trailDelay;
+                Sprite currentSprite = GetComponent<SpriteRenderer>().sprite;
+                currentTrail.GetComponent<SpriteRenderer>().sprite = currentSprite;
                 Destroy(currentTrail, trailDecay);
             }
         }
