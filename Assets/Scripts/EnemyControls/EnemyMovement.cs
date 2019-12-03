@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    public enum MovementType
+    {
+        Circuit, Snake, Reverse
+    }
+
+    public MovementType movementType;
     public float enemyVelocity;
 
     public Vector2 enemyStartingPosition;
     public Vector2 enemyNextPosition;
 
     public Vector2[] pointsToVisit;
+
+   
 
     private float step;
     private Vector2 currentPosition;
@@ -44,6 +52,8 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
+    
+
     private IEnumerator RotateEnemy(int point)
     {
         float pointX, pointY;
@@ -76,5 +86,7 @@ public class EnemyMovement : MonoBehaviour
         }
         currentPosition = pointsToVisit[point];
     }
+
+    
 }
 
