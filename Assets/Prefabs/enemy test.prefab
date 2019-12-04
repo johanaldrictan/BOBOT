@@ -125,6 +125,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 100
+  player: {fileID: 0}
+  EnemyPrefab: {fileID: 3886596718598744992}
+  pointsToVisit:
+  - {x: -22.01, y: -2.93}
+  - {x: -21.74, y: 0.12}
 --- !u!50 &3886596718598744997
 Rigidbody2D:
   serializedVersion: 4
