@@ -76,7 +76,7 @@ public class EnemyVision : MonoBehaviour
     public void SetOrigin(Vector3 origin)
     {
         this.origin = origin;
-        transform.position = Vector3.zero;
+        transform.position = new Vector3(0,0,transform.position.z);
         //Debug.Log(origin);
     }
 
