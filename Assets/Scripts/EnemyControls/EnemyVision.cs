@@ -9,26 +9,38 @@ public class EnemyVision : MonoBehaviour
     public int rayCount;
     public float viewDistance;
 
-
     public bool playerInSight;
     public Vector2 personalLastSighting;
 
     [SerializeField]
     private LayerMask layerMask;
 
-    private Vector3 origin = Vector3.zero;
+    private Vector2 currentPos;
+    private Quaternion currentRot;
+
+    private EnemyMovement enemyPos;
+
+    private Vector3 origin;
+    private Quaternion startingAngle;
     private Mesh mesh;
 
     private void Start()
     {
+        currentPos = enemyPos.transform.position;
+        currentRot = enemyPos.transform.rotation;
+
+        //start = enemyPos.enemyStartingPosition;
+        //next = enemyPos.enemyNextPosition;
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         float angle = 0f;
         float angleIncrease = fieldOfViewAngle / rayCount;
+        currentPos = enemyPos.transform.position;
+        currentRot = enemyPos.transform.rotation;
 
         Vector3[] verts = new Vector3[rayCount + 1 + 1];
         Vector2[] uv = new Vector2[verts.Length];
@@ -73,9 +85,28 @@ public class EnemyVision : MonoBehaviour
 
     }
 
-    private static Vector3 GetVectorFromAngle(float angle)
+    public void SetOrigin(Vector3 origin)
+    {
+        this.origin = origin;
+    }
+
+    public void ChangeViewDirection(Quaternion viewDirection)
+    {
+        startingAngle = viewDirection;
+    }
+
+    private Vector3 GetVectorFromAngle(float angle)
     {
         float angleRad = angle * (Mathf.PI / 180f);
         return new Vector3(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
+    }
+
+    private float GetAngleFromVectorFloat(Vector3 dir)
+    {
+        dir = dir.normalized;
+        float n = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        if (n < 0) n += 360;
+
+        return n;
     }
 }

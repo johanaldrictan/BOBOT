@@ -2422,7 +2422,7 @@ PrefabInstance:
     - target: {fileID: 2273743124010167603, guid: 36887c5c458461745b58d63f208eee95,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2273743124010167603, guid: 36887c5c458461745b58d63f208eee95,
         type: 3}
@@ -2468,6 +2468,11 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyStartingPosition.y
       value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2273743125813342643, guid: 36887c5c458461745b58d63f208eee95,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 4432994979715276812, guid: 36887c5c458461745b58d63f208eee95,
         type: 3}
@@ -3270,7 +3275,7 @@ Transform:
   - {fileID: 1159217468}
   - {fileID: 812237312}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1612622821
 MonoBehaviour:

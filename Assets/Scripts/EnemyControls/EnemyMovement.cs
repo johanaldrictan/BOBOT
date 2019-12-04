@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public enum MovementType
-    {
-        Circuit, Snake, Reverse
-    }
-
     public MovementType movementType;
     public float enemyVelocity;
 
@@ -17,7 +12,7 @@ public class EnemyMovement : MonoBehaviour
 
     public Vector2[] pointsToVisit;
 
-   
+    [SerializeField] private EnemyVision enemyVision;
 
     private float step;
     private Vector2 currentPosition;
@@ -32,24 +27,83 @@ public class EnemyMovement : MonoBehaviour
         step = enemyVelocity * Time.deltaTime;
         transform.position = enemyStartingPosition;
         currentPosition = transform.position;
-        StartCoroutine(moveEnemy());
+        StartCoroutine(moveEnemy(movementType));
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //enemyVision.ChangeViewDirection();
+        //enemyVision.SetOrigin(transform.position);
     }
 
-    IEnumerator moveEnemy()
+    public enum MovementType
     {
-        for(int i = 0; i< pointsToVisit.Length; ++i)
-        {
-            EnemyRotate = StartCoroutine(RotateEnemy(i));
+        Circuit, Snake, Reverse
+    }
 
-            EnemyMoving = StartCoroutine(Moving(i));
-            yield return EnemyMoving;
+    IEnumerator moveEnemy(MovementType movementType)
+    {
+        switch(movementType)
+        {
+            case MovementType.Circuit:
+                {
+                    while (true)
+                    {
+                        for (int i = 0; i < pointsToVisit.Length; ++i)
+                        {
+                            EnemyRotate = StartCoroutine(RotateEnemy(i));
+
+                            EnemyMoving = StartCoroutine(Moving(i));
+                            yield return EnemyMoving;
+                        }
+                    }
+                    break;
+                }
+            case MovementType.Reverse:
+                {
+                    while (true)
+                    {
+                        for (int i = pointsToVisit.Length; i >= 0; --i)
+                        {
+                            EnemyRotate = StartCoroutine(RotateEnemy(i));
+
+                            EnemyMoving = StartCoroutine(Moving(i));
+                            yield return EnemyMoving;
+                        }
+
+                    }
+                    break;
+                }
+            case MovementType.Snake:
+                {
+                    while (true)
+                    {
+                        
+                        for (int i = 0; i < pointsToVisit.Length; ++i)
+                        {
+                            EnemyRotate = StartCoroutine(RotateEnemy(i));
+
+                            EnemyMoving = StartCoroutine(Moving(i));
+                            yield return EnemyMoving;
+                        }
+
+                        for (int i = pointsToVisit.Length; i >= 0; --i)
+                        {
+                            EnemyRotate = StartCoroutine(RotateEnemy(i));
+
+                            EnemyMoving = StartCoroutine(Moving(i));
+                            yield return EnemyMoving;
+                        }
+
+                    }
+
+                    break;
+                }
+            default: break;
+
         }
+        
     }
 
     
@@ -64,16 +118,18 @@ public class EnemyMovement : MonoBehaviour
         pointX -= currentPosition.x;
         pointY -= currentPosition.y;
 
-        float angle = Mathf.Atan2(pointY, pointX) * Mathf.Rad2Deg;
-        Quaternion nextPointRotate = Quaternion.Euler(0, 0, angle);
+        float angle = (Mathf.Atan2(pointY, pointX) * Mathf.Rad2Deg);
+        Quaternion nextPointRotate = Quaternion.AngleAxis(angle, Vector3.forward);
 
         while (transform.rotation != nextPointRotate)
         {
 
-            //transform.rotation = Quaternion.Lerp(transform.rotation, nextPointRotate, Time.deltaTime * rotationSpeed);
+            transform.rotation = Quaternion.Slerp(transform.rotation, nextPointRotate, Time.deltaTime * rotationSpeed);
 
+            //enemyVision.ChangeViewDirection(transform.rotation);
             yield return null;
         }
+        transform.rotation = nextPointRotate;
     }
 
     private IEnumerator Moving(int point)
@@ -82,11 +138,11 @@ public class EnemyMovement : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, 
                 pointsToVisit[point], step);
+            //enemyVision.SetOrigin(transform.position);
             yield return null;
         }
         currentPosition = pointsToVisit[point];
     }
-
     
 }
 
