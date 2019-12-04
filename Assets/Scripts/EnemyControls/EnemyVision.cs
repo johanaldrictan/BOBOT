@@ -12,22 +12,17 @@ public class EnemyVision : MonoBehaviour
     public Vector2 personalLastSighting;
 
     private float angle;
-
-    private EnemyMovement em;
-    private Vector2 currentPos;
+ 
     private Quaternion currentRotate;
 
     [SerializeField]
     private LayerMask layerMask;
 
-    private Vector3 origin = Vector3.zero;
+    private Vector3 origin;
     private Mesh mesh;
 
     private void Start()
     {
-        //currentPos = em.transform.position;
-        //currentRotate = em.transform.rotation;
-        angle = fieldOfViewAngle / 2f;
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
     }
@@ -35,8 +30,6 @@ public class EnemyVision : MonoBehaviour
     private void Update()
     {
         float angleIncrease = fieldOfViewAngle / rayCount;
-        //currentPos = em.transform.position;
-        //currentRotate = em.transform.rotation;
         var tempAngle = angle;
         Vector3[] verts = new Vector3[rayCount + 1 + 1];
         Vector2[] uv = new Vector2[verts.Length];
@@ -83,6 +76,8 @@ public class EnemyVision : MonoBehaviour
     public void SetOrigin(Vector3 origin)
     {
         this.origin = origin;
+        transform.position = Vector3.zero;
+        //Debug.Log(origin);
     }
 
     private Vector3 GetVectorFromAngle(float angle)
@@ -91,23 +86,9 @@ public class EnemyVision : MonoBehaviour
         return new Vector3(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
     }
 
-    private void ChangeViewDirection(float viewDirection)
-    {
-       // GetVectorFromAngle(viewDirection);
-    }
-
     public void setAngle(float newAngle)
     {
         angle = newAngle;
         angle += fieldOfViewAngle / 2f;
-    }
-
-    private float GetAngleFromVectorFloat(Vector3 dir)
-    {
-        dir = dir.normalized;
-        float n = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        if (n < 0) n += 360;
-
-        return n;
     }
 }

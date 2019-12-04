@@ -7,17 +7,11 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private EnemyVision enemyVision;
     public MovementType movementType;
     public float enemyVelocity;
-    //public float timeToRotateInSeconds;
     public float rotationDegreesPerSecond;
-
-    public Vector2 enemyStartingPosition;
-    public Vector2 enemyNextPosition;
 
     public Vector2[] pointsToVisit; 
     
     private float step;
-    private Vector2 currentPosition;
-    //private Quaternion startRotation;
     
     Coroutine EnemyMoving;
     Coroutine EnemyRotate;
@@ -25,16 +19,13 @@ public class EnemyMovement : MonoBehaviour
     void Start()
     {
         step = enemyVelocity * Time.deltaTime;
-        transform.position = enemyStartingPosition;
-        currentPosition = transform.position;
         StartCoroutine(moveEnemy(movementType));
     }
 
     // Update is called once per frame
     void Update()
     {
-        //enemyVision.ChangeViewDirection();
-        //enemyVision.SetOrigin(transform.position);
+      
     }
 
     public enum MovementType
@@ -58,7 +49,7 @@ public class EnemyMovement : MonoBehaviour
                             yield return EnemyMoving;
                         }
                     }
-                    break;
+                   
                 }
             case MovementType.Reverse:
                 {
@@ -72,7 +63,7 @@ public class EnemyMovement : MonoBehaviour
                             yield return EnemyMoving;
                         }
                     }
-                    break;
+                    
                 }
             case MovementType.Snake:
                 {
@@ -95,7 +86,7 @@ public class EnemyMovement : MonoBehaviour
                             yield return EnemyMoving;
                         }
                     }
-                    break;
+                    
                 }
             default: break;
         }
@@ -109,8 +100,8 @@ public class EnemyMovement : MonoBehaviour
         pointX = pointsToVisit[point].x;
         pointY = pointsToVisit[point].y;
 
-        pointX -= currentPosition.x;
-        pointY -= currentPosition.y;
+        pointX -= transform.position.x;
+        pointY -= transform.position.y;
 
         float angle = (Mathf.Atan2(pointY, pointX) * Mathf.Rad2Deg);
         float originalAngle = transform.rotation.eulerAngles.z;
@@ -145,12 +136,14 @@ public class EnemyMovement : MonoBehaviour
     {
         while ((Vector2)transform.position != pointsToVisit[point])
         {
+            enemyVision.SetOrigin(transform.position);
+            Debug.Log(transform.position + "Movement");
             transform.position = Vector2.MoveTowards(transform.position, 
                 pointsToVisit[point], step);
-            enemyVision.SetOrigin(transform.position);
+            
             yield return null;
         }
-        currentPosition = pointsToVisit[point];
+        transform.position = pointsToVisit[point];
     }    
 }
 
