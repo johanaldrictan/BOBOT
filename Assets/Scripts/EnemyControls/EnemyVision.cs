@@ -91,4 +91,16 @@ public class EnemyVision : MonoBehaviour
         angle = newAngle;
         angle += fieldOfViewAngle / 2f;
     }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Player"))
+        {
+            GetComponent<MeshRenderer>().enabled = true;
+        }
+        else
+        {
+            GetComponent<MeshRenderer>().enabled = false;
+        }
+    }
 }

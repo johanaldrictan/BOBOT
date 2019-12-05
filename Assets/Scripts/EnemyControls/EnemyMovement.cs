@@ -12,6 +12,7 @@ public class EnemyMovement : MonoBehaviour
     public Vector2[] pointsToVisit; 
     
     private float step;
+    private bool canMove = true;
     
     Coroutine EnemyMoving;
     Coroutine EnemyRotate;
@@ -25,12 +26,12 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
+        
     }
 
     public enum MovementType
     {
-        Circuit, Snake, Reverse
+        Circuit, Snake, Reverse, Rotate
     }
 
     IEnumerator moveEnemy(MovementType movementType)
@@ -69,7 +70,7 @@ public class EnemyMovement : MonoBehaviour
                 {
                     while (true)
                     {
-                        
+
                         for (int i = 0; i < pointsToVisit.Length; ++i)
                         {
                             EnemyRotate = StartCoroutine(RotateEnemy(i));
@@ -87,6 +88,19 @@ public class EnemyMovement : MonoBehaviour
                         }
                     }
                     
+                }
+            case MovementType.Rotate:
+                {
+                    while(true)
+                    {
+                        for (int i = 0; i < pointsToVisit.Length; ++i)
+                        {
+                            EnemyRotate = StartCoroutine(RotateEnemy(i));
+
+                            
+                            yield return EnemyMoving;
+                        }
+                    }
                 }
             default: break;
         }
@@ -117,6 +131,7 @@ public class EnemyMovement : MonoBehaviour
         float timePassedSoFar = 0;
         //to readd speed, figure out how far to rotate in angles, and use that to calc total time needed here
         //slerp clamps t to 0-1 range, so when this goes above that range it will end
+        canMove = false;
         while (transform.rotation != nextPointRotate)
         {
             transform.rotation = 
@@ -129,6 +144,7 @@ public class EnemyMovement : MonoBehaviour
             enemyVision.setAngle(transform.rotation.eulerAngles.z);
             yield return null;
         }
+        canMove = true;
         transform.rotation = nextPointRotate;
     }
 
@@ -137,13 +153,19 @@ public class EnemyMovement : MonoBehaviour
         while ((Vector2)transform.position != pointsToVisit[point])
         {
             enemyVision.SetOrigin(transform.position);
-            Debug.Log(transform.position + "Movement");
-            transform.position = Vector2.MoveTowards(transform.position, 
-                pointsToVisit[point], step);
+            //Debug.Log(transform.position + "Movement");
+            Debug.Log(canMove);
+            if (canMove)
+            {
+                transform.position = Vector2.MoveTowards(transform.position,
+                    pointsToVisit[point], step);
+            }
             
             yield return null;
         }
         transform.position = pointsToVisit[point];
-    }    
+    }
+
+  
 }
 
