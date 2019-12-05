@@ -149,11 +149,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyVision: {fileID: 6873855836938888544}
-  movementType: 1
+  movementType: 0
   enemyVelocity: 1
-  rotationDegreesPerSecond: 360
+  rotationDegreesPerSecond: 45
   pointsToVisit:
-  - {x: 0, y: 0}
+  - {x: -5, y: 0}
+  - {x: -5, y: -2}
 --- !u!95 &1412577160498254184
 Animator:
   serializedVersion: 3
@@ -182,6 +183,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4685047281322770867}
+  - component: {fileID: 1764473633796336603}
   m_Layer: 0
   m_Name: EnemyPrefab
   m_TagString: Untagged
@@ -205,6 +207,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &1764473633796336603
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2353292873234615071}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.6, y: 1.1}
+  m_Direction: 0
 --- !u!1 &6873855836938888549
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,10 +235,9 @@ GameObject:
   - component: {fileID: 6873855836938888544}
   - component: {fileID: 6873855836938888547}
   - component: {fileID: 6873855836938888546}
-  - component: {fileID: 8582093935272081043}
   m_Layer: 0
   m_Name: EnemyVision
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -256,6 +273,7 @@ MonoBehaviour:
   viewDistance: 50
   playerInSight: 0
   personalLastSighting: {x: 0, y: 0}
+  GM: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 256
@@ -305,19 +323,3 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6873855836938888549}
   m_Mesh: {fileID: 0}
---- !u!58 &8582093935272081043
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6873855836938888549}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 9

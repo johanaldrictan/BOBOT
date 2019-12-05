@@ -11,6 +11,8 @@ public class EnemyVision : MonoBehaviour
     public bool playerInSight;
     public Vector2 personalLastSighting;
 
+    public GameManager GM;
+
     private float angle;
  
     private Quaternion currentRotate;
@@ -20,6 +22,8 @@ public class EnemyVision : MonoBehaviour
 
     private Vector3 origin;
     private Mesh mesh;
+
+   
 
     private void Start()
     {
@@ -43,6 +47,12 @@ public class EnemyVision : MonoBehaviour
         {
             Vector3 vertex;
             RaycastHit2D rayHit = Physics2D.Raycast(origin, GetVectorFromAngle(tempAngle), viewDistance, layerMask);
+
+            if (rayHit.collider.CompareTag("Player"))
+            {
+                Debug.Log("OH GOD I'M HIT");
+                GM.ResetScene();
+            }
 
             if (rayHit.collider == null)
             {
@@ -90,17 +100,5 @@ public class EnemyVision : MonoBehaviour
     {
         angle = newAngle;
         angle += fieldOfViewAngle / 2f;
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.CompareTag("Player"))
-        {
-            gameObject.SetActive(true);
-        }
-        else
-        {
-            gameObject.SetActive(false);
-        }
     }
 }

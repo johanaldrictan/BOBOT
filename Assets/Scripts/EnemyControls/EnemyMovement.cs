@@ -1,19 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine; 
+using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
-{ 
+{
     [SerializeField] private EnemyVision enemyVision;
     public MovementType movementType;
     public float enemyVelocity;
     public float rotationDegreesPerSecond;
 
-    public Vector2[] pointsToVisit; 
-    
+    public Vector2[] pointsToVisit;
+
     private float step;
     private bool canMove = true;
-    
+
     Coroutine EnemyMoving;
     Coroutine EnemyRotate;
 
@@ -26,7 +26,7 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public enum MovementType
@@ -36,7 +36,7 @@ public class EnemyMovement : MonoBehaviour
 
     IEnumerator moveEnemy(MovementType movementType)
     {
-        switch(movementType)
+        switch (movementType)
         {
             case MovementType.Circuit:
                 {
@@ -50,7 +50,7 @@ public class EnemyMovement : MonoBehaviour
                             yield return EnemyMoving;
                         }
                     }
-                   
+
                 }
             case MovementType.Reverse:
                 {
@@ -64,7 +64,7 @@ public class EnemyMovement : MonoBehaviour
                             yield return EnemyMoving;
                         }
                     }
-                    
+
                 }
             case MovementType.Snake:
                 {
@@ -87,30 +87,30 @@ public class EnemyMovement : MonoBehaviour
                             yield return EnemyMoving;
                         }
                     }
-                    
+
                 }
             case MovementType.Rotate:
                 {
-                    while(true)
+                    while (true)
                     {
                         for (int i = 0; i < pointsToVisit.Length; ++i)
                         {
                             EnemyRotate = StartCoroutine(RotateEnemy(i));
 
-                            
+
                             yield return EnemyMoving;
                         }
                     }
                 }
             default: break;
         }
-        
-    }    
+
+    }
 
     private IEnumerator RotateEnemy(int point)
     {
         float pointX, pointY;
-        
+
         pointX = pointsToVisit[point].x;
         pointY = pointsToVisit[point].y;
 
@@ -120,11 +120,11 @@ public class EnemyMovement : MonoBehaviour
         float angle = (Mathf.Atan2(pointY, pointX) * Mathf.Rad2Deg);
         float originalAngle = transform.rotation.eulerAngles.z;
         var a = Mathf.Abs(originalAngle - angle);
-        if(a > 180)
+        if (a > 180)
         {
             a -= 180;
         }
-        
+
         float timeToRotateInSeconds = a / rotationDegreesPerSecond;
         Quaternion nextPointRotate = Quaternion.Euler(0, 0, angle);
         Quaternion startRotation = transform.rotation;
@@ -134,11 +134,11 @@ public class EnemyMovement : MonoBehaviour
         canMove = false;
         while (transform.rotation != nextPointRotate)
         {
-            transform.rotation = 
+            transform.rotation =
                 Quaternion.Slerp(
                     startRotation,
                     nextPointRotate,
-                    timePassedSoFar/timeToRotateInSeconds);
+                    timePassedSoFar / timeToRotateInSeconds);
 
             timePassedSoFar += Time.deltaTime;
             enemyVision.setAngle(transform.rotation.eulerAngles.z);
@@ -160,12 +160,20 @@ public class EnemyMovement : MonoBehaviour
                 transform.position = Vector2.MoveTowards(transform.position,
                     pointsToVisit[point], step);
             }
-            
+
             yield return null;
         }
         transform.position = pointsToVisit[point];
     }
 
-  
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Player")) ;
+        {
+            Destroy(transform.parent.gameObject);
+        }
+    }
+
+
 }
 
