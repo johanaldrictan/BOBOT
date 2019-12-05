@@ -152,7 +152,8 @@ MonoBehaviour:
   movementType: 1
   enemyVelocity: 1
   rotationDegreesPerSecond: 360
-  pointsToVisit: []
+  pointsToVisit:
+  - {x: 0, y: 0}
 --- !u!95 &1412577160498254184
 Animator:
   serializedVersion: 3

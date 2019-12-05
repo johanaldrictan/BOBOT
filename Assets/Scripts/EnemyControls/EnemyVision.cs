@@ -92,15 +92,15 @@ public class EnemyVision : MonoBehaviour
         angle += fieldOfViewAngle / 2f;
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Player"))
         {
-            GetComponent<MeshRenderer>().enabled = true;
+            gameObject.SetActive(true);
         }
         else
         {
-            GetComponent<MeshRenderer>().enabled = false;
+            gameObject.SetActive(false);
         }
     }
 }
