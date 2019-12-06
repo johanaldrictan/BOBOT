@@ -15,6 +15,7 @@ public class EnemyMovement : MonoBehaviour
 
     private float step;
     private bool canMove = true;
+    private float killSpeed = 5f;
 
     Coroutine EnemyMoving;
     Coroutine EnemyRotate;
@@ -28,7 +29,7 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log()
+        //Debug.Log();
     }
 
     public enum MovementType
