@@ -155,6 +155,7 @@ MonoBehaviour:
   pointsToVisit:
   - {x: -5, y: 0}
   - {x: -5, y: -2}
+  killSpeed: 10
 --- !u!95 &1412577160498254184
 Animator:
   serializedVersion: 3

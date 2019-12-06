@@ -339,7 +339,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 857487177}
   m_PrefabAsset: {fileID: 0}
---- !u!70 &1349983044
+--- !u!70 &1349983048
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -353,7 +353,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.7, y: 1.3}
+  m_Size: {x: 0.13, y: 0.25}
   m_Direction: 0
 --- !u!4 &1474903606 stripped
 Transform:

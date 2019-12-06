@@ -11,6 +11,8 @@ public class EnemyMovement : MonoBehaviour
 
     public Vector2[] pointsToVisit;
 
+    private PlayerController player;
+
     private float step;
     private bool canMove = true;
 
@@ -26,7 +28,7 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log()
     }
 
     public enum MovementType
@@ -168,9 +170,13 @@ public class EnemyMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Player")) ;
+        if (collision.collider.CompareTag("Player"));
         {
-            Destroy(transform.parent.gameObject);
+            Debug.Log(collision.rigidbody.velocity.magnitude);
+            if (collision.rigidbody && collision.rigidbody.velocity.magnitude > killSpeed)
+            {
+                Destroy(transform.parent.gameObject);
+            }
         }
     }
 
